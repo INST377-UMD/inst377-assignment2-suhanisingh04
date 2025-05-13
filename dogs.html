@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dog Carousel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/annyang@2.6.1/dist/annyang.min.js"></script>  
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="homePage.html">Home</a></li>
+      <li><a href="stocks.html">Stocks</a></li>
+      <li><a href="dogs.html">Dogs</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1>Dog Breeds</h1>
+    <div id="breed-buttons"></div>
+
+    <div class="carousel">
+      <img id="dog-image" src="" alt="A cute dog" />
+    </div>
+
+    <div id="breed-info">Loading Labrador...</div>
+  </div>
+
+  <!-- Voice Control Instructions -->
+  <div class="audio-controls">
+    <h3>Voice Commands</h3>
+    <ul>
+      <li><strong>"Hello"</strong> — Alerts "Hello World"</li>
+      <li><strong>"Change the color to [color]"</strong></li>
+      <li><strong>"Navigate to [home/stocks/dogs]"</strong></li>
+      <li><strong>"Show [breed]"</strong> — Loads breed information</li>
+    </ul>
+    <button onclick="annyang.start()">Turn On Audio</button>
+    <button onclick="annyang.abort()">Turn Off Audio</button>
+  </div>
+
+  <script src="dogs.js"></script>
+  <script src="homePage.js"></script>
+</body>
+</html>
