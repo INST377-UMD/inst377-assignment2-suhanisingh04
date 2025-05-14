@@ -1,0 +1,273 @@
+/* GLOBAL STYLES */
+html, body {
+    font-family: Inter, Avenir, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* NAVIGATION */
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px;
+    background: #f0f0f0;
+    gap: 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 5px 10px;
+  }
+  
+  nav ul li a:hover,
+  nav ul li a.active {
+    background-color: #ddd;
+    border-radius: 4px;
+  }
+  
+  /* HOMEPAGE STYLES */
+  main {
+    padding: 20px;
+  }
+  
+  #quote-section {
+    margin-top: 30px;
+    font-style: italic;
+    font-size: 1.2em;
+  }
+  
+  /* DOGS PAGE STYLES */
+  .container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 1rem;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    color: #555;
+  }
+  
+  /* BREED BUTTONS */
+  #breed-buttons {
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .button-45 {
+    align-items: center;
+    background-color: #FFE7E7;
+    border: 1px solid #FEE0E0;
+    border-radius: 11px;
+    box-sizing: border-box;
+    color: #D33A2C;
+    cursor: pointer;
+    display: flex;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 33.5px;
+    padding: 2px 12px;
+    text-align: left;
+    text-decoration: none;
+    transition: border .2s ease-in-out, box-shadow .2s ease-in-out;
+    user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+  }
+  
+  .button-45:hover {
+    background-color: #FFE3E3;
+    border-color: #FAA4A4;
+  }
+  
+  .button-45:focus,
+  .button-45:active,
+  .button-45:active:hover,
+  .button-45:focus:hover {
+    background-color: #D33A2C;
+    box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px inset;
+    color: #FFFFFF;
+    outline: 0;
+  }
+  
+  /* DOG CAROUSEL */
+  .carousel {
+    margin: 20px auto;
+    max-width: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .carousel img {
+    width: 100%;
+    display: block;
+  }
+  
+  /* BREED INFO */
+  #breed-info {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #444;
+  }
+  
+  /* STOCKS PAGE STYLES */
+  canvas {
+    margin-top: 30px;
+    max-width: 100%;
+  }
+  
+  table {
+    margin-top: 30px;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #f9f9f9;
+  }
+  
+  /* AUDIO INSTRUCTIONS SECTION (shared) */
+  .audio-controls {
+    margin-top: 40px;
+    padding: 15px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ccc;
+  }
+  
+  /* BUTTON STYLES */
+  .button-56 {
+    align-items: center;
+    background-color: #fee6e3;
+    border: 2px solid #111;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #111;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: inherit;
+    font-size: 16px;
+    height: 48px;
+    justify-content: center;
+    line-height: 24px;
+    margin: 10px;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button-56:after {
+    background-color: #111;
+    border-radius: 8px;
+    content: "";
+    display: block;
+    height: 48px;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    top: -2px;
+    transform: translate(8px, 8px);
+    transition: transform 0.2s ease-out;
+    z-index: -1;
+  }
+  
+  .button-56:hover:after {
+    transform: translate(0, 0);
+  }
+  
+  .button-56:active {
+    background-color: #ffdeda;
+    outline: 0;
+  }
+  
+  .button-56:hover {
+    outline: 0;
+  }
+  
+  .button-51 {
+    background-color: transparent;
+    border: 1px solid #266DB6;
+    box-sizing: border-box;
+    color: #00132C;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    padding: 16px 23px;
+    position: relative;
+    text-decoration: none;
+    user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button-51:hover,
+  .button-51:active {
+    outline: 0;
+  }
+  
+  .button-51:hover {
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .button-51:before {
+    background-color: #D5EDF6;
+    content: "";
+    height: calc(100% + 3px);
+    position: absolute;
+    right: -7px;
+    top: -9px;
+    transition: background-color 300ms ease-in;
+    width: 100%;
+    z-index: -1;
+  }
+  
+  .button-51:hover:before {
+    background-color: #6DCFF6;
+  }
+  
+  /* RESPONSIVE STYLES */
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    #breed-buttons button {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .button-56 {
+      padding: 0 40px;
+    }
+  
+    .button-51 {
+      padding: 16px 32px;
+    }
+  }  

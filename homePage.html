@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home | Class Activities</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="homePage.html">Home</a></li>
+      <li><a href="stocks.html">Stocks</a></li>
+      <li><a href="dogs.html">Dogs</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <h1>Welcome to Class Activities!</h1>
+
+    <!-- Custom Buttons -->
+    <button class="button-56" onclick="location.href='stocks.html'">Stocks</button>
+    <button class="button-56" onclick="location.href='dogs.html'">Dogs</button>
+
+    <!-- Quote API Output -->
+    <section id="quote-section">
+      <h2>Inspirational Quote</h2>
+      <p id="quote-text">Loading quote...</p>
+    </section>
+  </main>
+
+  <!-- Audio Instruction Box -->
+  <div class="audio-controls">
+    <h3>Voice Commands</h3>
+    <ul>
+      <li><strong>"Hello"</strong> — Alerts "Hello World"</li>
+      <li><strong>"Change the color to [color]"</strong> — Changes background</li>
+      <li><strong>"Navigate to [home/stocks/dogs]"</strong> — Goes to page</li>
+    </ul>
+    <button onclick="annyang.start()">Turn On Audio</button>
+    <button onclick="annyang.abort()">Turn Off Audio</button>
+  </div>
+
+  <!-- JS Includes -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+  <script src="homePage.js"></script>
+  <script>
+    async function fetchQuote() {
+      try {
+        const res = await fetch('https://zenquotes.io/api/random');
+        const data = await res.json();
+        document.getElementById('quote-text').innerText = `"${data[0].q}" — ${data[0].a}`;
+      } catch (err) {
+        document.getElementById('quote-text').innerText = "Quote could not be loaded.";
+      }
+    }
+    fetchQuote();
+  </script>
+</body>
+</html>

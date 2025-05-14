@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stocks | Class Activities</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="homePage.html">Home</a></li>
+      <li><a href="stocks.html">Stocks</a></li>
+      <li><a href="dogs.html">Dogs</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Stock Lookup</h1>
+    <input type="text" id="stock-input" placeholder="Enter Ticker (e.g. AAPL)" maxlength="5" />
+    <select id="date-range">
+      <option value="30">30 Days</option>
+      <option value="60">60 Days</option>
+      <option value="90">90 Days</option>
+    </select>
+    <button class="button-51" onclick="lookupStock()">Get Stock Data</button>
+
+    <canvas id="myChart"></canvas>
+
+    <section id="reddit-stocks">
+      <h2>Top 5 Reddit Stocks</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Ticker</th>
+            <th>Comments</th>
+            <th>Sentiment</th>
+          </tr>
+        </thead>
+        <tbody id="redditTable"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- Voice Control Instructions -->
+  <div class="audio-controls">
+    <h3>Voice Commands</h3>
+    <ul>
+      <li><strong>"Hello"</strong> — Alerts "Hello World"</li>
+      <li><strong>"Change the color to [color]"</strong></li>
+      <li><strong>"Navigate to [home/stocks/dogs]"</strong></li>
+      <li><strong>"Lookup [stock]"</strong> — Loads 30-day chart</li>
+    </ul>
+    <button onclick="annyang.start()">Turn On Audio</button>
+    <button onclick="annyang.abort()">Turn Off Audio</button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+  <script src="stocks.js"></script>
+  <script src="homePage.js"></script>
+</body>
+</html>
